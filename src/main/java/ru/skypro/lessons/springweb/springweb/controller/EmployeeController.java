@@ -35,8 +35,8 @@ public class EmployeeController {
     }
     //Создание множества новых сотрудников;
     @PostMapping
-    public Employee getCreateMany(@RequestBody Employee employees){
-        return employeeService.getCreateMany(employees);
+    public List<Employee> getCreateManyEmployee(){
+         return employeeService.getCreateManyEmployee();
     }
     //Редактирование сотрудника с указанным id;
 //    @PutMapping("/{id}")
@@ -57,5 +57,5 @@ public class EmployeeController {
 //    @GetMapping("/salaryHigherThan")
 //    public List<Employee> getFindEmployeeSalaryHigherThan(@RequestParam int salary) {
 //        return employeeService.getFindEmployeeSalaryHigherThan(salary);
-    }
+    //}
 }

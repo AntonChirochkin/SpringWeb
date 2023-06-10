@@ -11,7 +11,6 @@ public interface EmployeeRepository {
     public Employee getFindEmployeeWithMaxSalary();
     public List<Employee> getFindEmployeeSalaryMoreThanAverage();
 
-    public Employee getCreateMany();
+    public List<Employee> getCreateManyEmployee();
 
-
-}
+    }

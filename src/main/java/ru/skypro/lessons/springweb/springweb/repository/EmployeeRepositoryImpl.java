@@ -60,9 +60,9 @@ public class EmployeeRepositoryImpl implements EmployeeRepository {
 
     }
 
-    @Override
-    public Employee getCreateMany(List<Employee> employees) {
-        return employees.forEach(Employee -> employeeList.add(employee));
+   @Override
+    public List<Employee> getCreateManyEmployee() {
+       return  employeeList.add(Employee employee);
     }
 
 }

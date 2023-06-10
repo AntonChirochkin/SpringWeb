@@ -13,7 +13,7 @@ public interface EmployeeService {
     Employee getFindEmployeeWithMaxSalary();
     List<Employee> getFindEmployeeSalaryMoreThanAverage();
 
-    Employee getCreateMany(Employee employee);
+    List<Employee> getCreateManyEmployee();
 
 
 }
