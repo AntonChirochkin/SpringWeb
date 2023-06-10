@@ -23,6 +23,6 @@ public class EmployeeServiceImpl implements EmployeeService {
     public Employee getFindEmployeeWithMinSalary(){ return employeeRepository.getFindEmployeeWithMinSalary(); }
     public Employee getFindEmployeeWithMaxSalary(){ return employeeRepository.getFindEmployeeWithMaxSalary(); }
     public List<Employee> getFindEmployeeSalaryMoreThanAverage(){ return employeeRepository.getFindEmployeeSalaryMoreThanAverage(); }
-    public List<Employee> getCreateManyEmployee(){ return employeeRepository.getCreateManyEmployee(); }
+    public void сreateManyEmployee(){ return employeeRepository.add(); }
 
 }

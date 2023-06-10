@@ -1,5 +1,6 @@
 package ru.skypro.lessons.springweb.springweb.controller;
 
+import io.swagger.v3.oas.annotations.parameters.RequestBody;
 import org.springframework.web.bind.annotation.*;
 import ru.skypro.lessons.springweb.springweb.pojo.Employee;
 import ru.skypro.lessons.springweb.springweb.service.EmployeeService;
@@ -35,8 +36,8 @@ public class EmployeeController {
     }
     //Создание множества новых сотрудников;
     @PostMapping
-    public List<Employee> getCreateManyEmployee(){
-         return employeeService.getCreateManyEmployee();
+    public void createManyEmployee(@RequestBody List<Employee> employeeList){
+          employeeService.createManyEmployee(employeeList);
     }
     //Редактирование сотрудника с указанным id;
 //    @PutMapping("/{id}")

@@ -10,7 +10,7 @@ public interface EmployeeRepository {
     public Employee getFindEmployeeWithMinSalary();
     public Employee getFindEmployeeWithMaxSalary();
     public List<Employee> getFindEmployeeSalaryMoreThanAverage();
+    public void add(Employee employee);
 
-    public List<Employee> getCreateManyEmployee();
 
     }

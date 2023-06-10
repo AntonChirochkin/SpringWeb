@@ -1,18 +1,12 @@
 package ru.skypro.lessons.springweb.springweb.repository;
 
-import org.springframework.http.converter.json.GsonBuilderUtils;
 import org.springframework.stereotype.Repository;
 import ru.skypro.lessons.springweb.springweb.exeption.EmployeeNotFoundExeption;
 import ru.skypro.lessons.springweb.springweb.pojo.Employee;
-import ru.skypro.lessons.springweb.springweb.service.EmployeeService;
 
-import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
-
-import static java.util.Arrays.asList;
-import static java.util.Arrays.stream;
 
 @Repository
 public class EmployeeRepositoryImpl implements EmployeeRepository {
@@ -60,9 +54,11 @@ public class EmployeeRepositoryImpl implements EmployeeRepository {
 
     }
 
-   @Override
-    public List<Employee> getCreateManyEmployee() {
-       return  employeeList.add(Employee employee);
+    @Override
+    public void add(Employee employee) {
+
+        employeeList.add(employee),
+        employeeList.forEach(employee -> EmployeeRepository.add(employee));
     }
 
 }
