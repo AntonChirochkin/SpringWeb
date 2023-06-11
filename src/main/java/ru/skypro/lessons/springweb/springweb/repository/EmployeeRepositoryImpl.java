@@ -57,8 +57,8 @@ public class EmployeeRepositoryImpl implements EmployeeRepository {
     @Override
     public void add(Employee employee) {
 
-        employeeList.add(employee),
-        employeeList.forEach(employee -> EmployeeRepository.add(employee));
+        employeeList.add(employee);
+
     }
 
 }
